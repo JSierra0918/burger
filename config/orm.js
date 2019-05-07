@@ -14,7 +14,7 @@ var orm = {
         });
     },
 
-    insertOne: function (table,burgerName, cb) {
+    insertOne: function (table, burgerName, cb) {
         var queryString = "INSERT INTO ?? (burger_name, devoured) VALUES ?";
         connection.query(queryString, [table, burgerName], function (err, result) {
             if (err) {
@@ -24,9 +24,9 @@ var orm = {
         });
     },
 
-    updateOne : function (table, colName,value){
+    updateOne : function (table, colName, value, cb){
         var queryString = "UPDATE ?? SET ?? = ? ";
-        connection.query(queryString,[table, colName,value],function(err, result){
+        connection.query(queryString,[table, colName, value],function(err, result){
             if (err) {
                 throw err;
             }
