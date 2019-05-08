@@ -14,9 +14,9 @@ var orm = {
         });
     },
 
-    insertOne: function (table, burgerName, cb) {
-        var queryString = "INSERT INTO ?? (burger_name, devoured) VALUES ?";
-        connection.query(queryString, [table, burgerName], function (err, result) {
+    insertOne: function (table, burgerName, value, cb) {
+        var queryString = "INSERT INTO ?? (?, devoured) VALUES ?";
+        connection.query(queryString, [table, burgerName, value], function (err, result) {
             if (err) {
                 throw err;
             }
