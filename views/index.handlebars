@@ -14,7 +14,9 @@
         <div class="flex-mid">
             <div class="notDevoured">
                 <ul class="ul-Burger">
-                    <li><span class="burgerText">DEVOUR!</span><button class="btnDevour"></button></li>
+                    {{#each burgers}}
+                    <li><span class="burgerText"> {{burger_name}}</span><button class="btnDevour"></button></li>
+                    {{/each}}
                 </ul>
             </div>
         </div>

@@ -1,5 +1,23 @@
 var express = require("express");
 var burger = require("../models/burger");
 
-var app = express();
+// ===============================================================================
+// ROUTING
+// ===============================================================================
 
+module.exports = function (app) {
+
+    //update page with burger db
+    app.get("/", function (req, res){
+        burger.showAll(function (data){
+            var burgerObj = {
+                burgers: data
+            }
+            console.log(burgerObj);
+            console.log(data);
+
+            res.render("index",burgerObj);
+        });
+    })
+
+}
