@@ -16,8 +16,10 @@ module.exports = function (app) {
             console.log(burgerObj);
             console.log(data);
 
-            res.render("index",burgerObj);
+            res.render("index", burgerObj);
         });
     })
 
+    //create a burger on click
+    // app.post();
 }
