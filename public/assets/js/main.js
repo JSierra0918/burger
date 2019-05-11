@@ -1,21 +1,35 @@
-$(document).ready( function (){
+$(document).ready(function () {
 
     //when you click submit, insert into database and restart project.
     $(".submit-button").on("click", createBurger);
+    $(".btnDevour").on("click", updateBurger);
 
-    function createBurger(event){
+    function createBurger(event) {
         event.preventDefault();
 
-      var bgName =  $("#submitBurger").val();
-      console.log(bgName);
-      var newBurger = {
-          bgName
-      }
-      
-    $.post("/api/burgers", newBurger,function (result){
+        var bgName = $("#submitBurger").val().trim();
+        console.log(bgName);
+        var newBurger = {
+            bgName: bgName + " Burger"
+        }
 
-        location.reload();
-    })
+        $.post("/api/burgers", newBurger, function (result) {
+            location.reload();
+        });
     }
 
+    function updateBurger(event) {
+        event.preventDefault();
+        var id = $(this).data("burgername");
+        console.log(id);
+        $.ajax("/api/burgers/" + id, {
+            type: "PUT",
+            data: {
+                devoured: 1
+            }
+        }).then(function () {
+            location.reload();
+            console.log("devoured")
+        })
+    }
 });

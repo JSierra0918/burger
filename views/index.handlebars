@@ -15,9 +15,21 @@
             <div class="notDevoured">
                 <ul class="ul-Burger">
                     {{#each burgers}}
-                    <li data-burgerName="{{id}}" class="burgerText"><span> {{burger_name}}</span><button
-                            class="btnDevour">Devour
-                            Burger!</button></li>
+                    {{#if devoured}}
+                    <li class="burgerText"><span> {{burger_name}}</span><button class="btnDevour"
+                            data-burgerName="{{this.id}}">Un EAT!</button></li>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+
+              <div class="devoured">
+                <ul class="ul-Burger">
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    <li class="burgerText"><span> {{burger_name}}</span><button class="btnDevour"
+                            data-burgerName="{{this.id}}">Devour Burger!</button></li>
+                    {{/unless}}
                     {{/each}}
                 </ul>
             </div>
@@ -28,9 +40,7 @@
             <div class="input-wrapper"><input type="text" data-burgerName="" id="submitBurger">
             </div>
             <button class="submit-button">Submit</button>
-
         </div>
-
 </body>
 
 </html>

@@ -15,19 +15,19 @@ var orm = {
     },
 
     insertOne: function (table, colName, value, cb) {
-        var queryString = "INSERT INTO ?? (?, devoured) VALUES (?, false)";
+        var queryString = "INSERT INTO ?? (??, devoured) VALUES (?, false)";
+       
         connection.query(queryString, [table, colName, value], function (err, result) {
             if (err) {
-                throw err;
+                throw err;z
             }
-            console.log(result);
             cb(result);
         });
     },
 
-    updateOne : function (table, colName, value, cb){
-        var queryString = "UPDATE ?? SET ?? = ? ";
-        connection.query(queryString,[table, colName, value],function(err, result){
+    updateOne : function (table, colName, value, id, cb){
+        var queryString = "UPDATE ?? SET ?? = ? WHERE id = ?";
+        connection.query(queryString,[table, colName, value, id],function(err, result){
             if (err) {
                 throw err;
             }

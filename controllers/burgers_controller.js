@@ -26,4 +26,11 @@ module.exports = function (app) {
             res.json(data)
         })
     });
+
+    app.put("/api/burgers/:id", function (req,res){
+        burger.update(req.body.devoured, req.params.id, function (data){
+            res.json(data);
+        })
+    });  
+
 }
