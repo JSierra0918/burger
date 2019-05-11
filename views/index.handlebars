@@ -15,12 +15,21 @@
             <div class="notDevoured">
                 <ul class="ul-Burger">
                     {{#each burgers}}
-                    <li><span class="burgerText"> {{burger_name}}</span><button class="btnDevour"></button></li>
+                    <li data-burgerName="{{id}}" class="burgerText"><span> {{burger_name}}</span><button
+                            class="btnDevour">Devour
+                            Burger!</button></li>
                     {{/each}}
                 </ul>
             </div>
         </div>
-    </div>
+
+        <div class="submit-form">
+            <h3> Create a new burger</h3>
+            <div class="input-wrapper"><input type="text" data-burgerName="" id="submitBurger">
+            </div>
+            <button class="submit-button">Submit</button>
+
+        </div>
 
 </body>
 

@@ -1,3 +1,4 @@
+
 DROP DATABASE IF EXISTS burgers_db;
 CREATE DATABASE burgers_db;
 USE burgers_db;
@@ -9,3 +10,5 @@ CREATE TABLE burgers
 	devoured BOOLEAN NOT NULL default false,
 	PRIMARY KEY (id)
 );
+
+INSERT INTO burgers (burger_name, devoured) values("123");

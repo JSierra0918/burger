@@ -8,12 +8,12 @@ var burger = {
         });
     },
     insert: function(burgerName, cb){
-        orm.insertOne("burgers", burgerName, function(res){
+        orm.insertOne("burgers", "burger_name", burgerName, function(res){
             cb(res);
         });
     },
     update: function(customBurger, cb){
-        orm.updateOne("burgers","burger_name", customBurge, function(res){
+        orm.updateOne("burgers","burger_name", customBurger,function(res){
             cb(res);
         });
     }

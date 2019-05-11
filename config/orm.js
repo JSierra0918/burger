@@ -14,12 +14,13 @@ var orm = {
         });
     },
 
-    insertOne: function (table, burgerName, value, cb) {
-        var queryString = "INSERT INTO ?? (?, devoured) VALUES ?";
-        connection.query(queryString, [table, burgerName, value], function (err, result) {
+    insertOne: function (table, colName, value, cb) {
+        var queryString = "INSERT INTO ?? (?, devoured) VALUES (?, false)";
+        connection.query(queryString, [table, colName, value], function (err, result) {
             if (err) {
                 throw err;
             }
+            console.log(result);
             cb(result);
         });
     },
