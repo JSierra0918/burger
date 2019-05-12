@@ -1,3 +1,52 @@
 body {
-    background-color: red;
+    background-color: #64c0e9;
+}
+
+h1 {text-align: center;}
+
+.flex-mid {
+    display: flex;
+}
+
+.not-devoured {
+    flex: 1;
+    flex-basis: 300px;
+    background-color: pink;
+}
+
+.devoured {
+    flex: 1;
+    flex-basis: 300px;
+    background-color: #adf;
+}
+
+.not-devoured h2 {
+    text-align: center;
+}
+
+.devoured h2 {
+    text-align: center;
+}
+
+.ul-Burger {
+    list-style-type: none;
+}
+
+.devourText {
+    text-decoration: line-through;
+    color: rgb(189, 189, 189);
+}
+.submit-form {
+    text-align: center;
+}
+
+.submit-form h3 {
+    font-size: 3em;
+    text-align: center;
+}
+
+input#submitBurger {
+    width: 300px;
+    height: 50px;
+    text-align: center;
 }

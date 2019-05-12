@@ -12,24 +12,26 @@
     <div class="flex-container">
         <h1>Welcome to Da Burger Joint, Home of the Da Burger Joint!</h1>
         <div class="flex-mid">
-            <div class="notDevoured">
-                <ul class="ul-Burger">
-                    {{#each burgers}}
-                    {{#if devoured}}
-                    <li class="burgerText"><span> {{burger_name}}</span><button class="btnDevour"
-                            data-burgerName="{{this.id}}">Un EAT!</button></li>
-                    {{/if}}
-                    {{/each}}
-                </ul>
-            </div>
-
-              <div class="devoured">
+            <div class="not-devoured">
+                <h2>Burgers to eat!</h2>
                 <ul class="ul-Burger">
                     {{#each burgers}}
                     {{#unless devoured}}
                     <li class="burgerText"><span> {{burger_name}}</span><button class="btnDevour"
                             data-burgerName="{{this.id}}">Devour Burger!</button></li>
                     {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+
+            <div class="devoured">
+                <h2>Burgers Devoured</h2>
+                <ul class="ul-Burger">
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    <li class="devourText"><span> {{burger_name}} </span><button class="btnDevour"
+                            data-burgerName="{{this.id}}">Un EAT!</button></li>
+                    {{/if}}
                     {{/each}}
                 </ul>
             </div>
