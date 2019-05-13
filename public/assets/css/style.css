@@ -1,8 +1,21 @@
 body {
     background: url("../img/burger.gif") repeat;
 }
+.title {
+    text-align: center;
+    background-color: #ffd967;
+    color: #000000;
+    margin-bottom: 20px;
+    padding: 10px;
+}
 
-h1 {text-align: center;}
+.title h1, .title h3{
+    margin: 0;
+}
+
+.title h3 {
+    background: #FFC107;
+}
 
 .flex-mid {
     display: flex;
@@ -11,7 +24,7 @@ h1 {text-align: center;}
 .not-devoured {
     flex: 1;
     flex-basis: 300px;
-    background-color: pink;
+    background-color: #2196F3;
 }
 
 .devoured {
@@ -30,8 +43,18 @@ h1 {text-align: center;}
 
 .ul-Burger {
     list-style-type: none;
-    background: #053547;
+    padding: 0px;
+}
+
+.eatText {
+    background: #137ed3;
     font-size: 1.4em;
+    padding: 5px;
+    color: white;
+}
+
+.ul-Burger span {
+    margin-right: 20px;
 }
 
 .devourText {
