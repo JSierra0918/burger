@@ -32,8 +32,9 @@
                 <ul class="ul-Burger">
                     {{#each burgers}}
                     {{#if devoured}}
-                    <li class="devouredText"><span> {{burger_name}} </span><button class="btnDevour"
-                            data-burgerName="{{this.id}}">Un EAT!</button></li>
+                    <li class="devouredText"><span> {{burger_name}} </span>
+                    </li>
+                    {{!-- <button class="btnDevour" data-burgerName="{{this.id}}">Un EAT!</button> --}}
                     {{/if}}
                     {{/each}}
                 </ul>

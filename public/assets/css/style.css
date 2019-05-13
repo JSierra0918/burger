@@ -48,18 +48,28 @@ body {
 
 .eatText {
     background: #137ed3;
-    font-size: 1.4em;
+    font-size: 1.1em;
     padding: 5px;
     color: white;
+    margin-top: 5px;
 }
 
 .ul-Burger span {
     margin-right: 20px;
 }
 
-.devourText {
+.devouredText {
     text-decoration: line-through;
-    color: rgb(189, 189, 189);
+    background: #d31313;
+    font-size: 1.1em;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.devouredText:hover {
+    background: #9e0707;
 }
 .submit-form {
     text-align: center;

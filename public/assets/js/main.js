@@ -9,8 +9,14 @@ $(document).ready(function () {
 
         var bgName = $("#submitBurger").val().trim();
         console.log(bgName);
-        var newBurger = {
-            bgName: bgName + " Burger"
+        if(bgName.includes("burger")){
+            var newBurger = {
+                bgName
+            }
+        }else {
+            var newBurger = {
+                bgName: bgName + " Burger"
+            }
         }
 
         $.post("/api/burgers", newBurger, function (result) {
