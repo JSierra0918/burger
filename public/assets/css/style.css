@@ -1,5 +1,6 @@
 body {
-    background-color: #64c0e9;
+    background: url("../img/burger.gif") repeat;
+    margin: 0;
 }
 
 h1 {text-align: center;}
@@ -30,6 +31,8 @@ h1 {text-align: center;}
 
 .ul-Burger {
     list-style-type: none;
+    background: #053547;
+    font-size: 1.4em;
 }
 
 .devourText {
@@ -43,6 +46,7 @@ h1 {text-align: center;}
 .submit-form h3 {
     font-size: 3em;
     text-align: center;
+    background: #ffbf47;
 }
 
 input#submitBurger {
