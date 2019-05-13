@@ -10,5 +10,3 @@ CREATE TABLE burgers
 	devoured BOOLEAN NOT NULL default false,
 	PRIMARY KEY (id)
 );
-
-INSERT INTO burgers (burger_name, devoured) values("123");
