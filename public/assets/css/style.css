@@ -94,3 +94,9 @@ input#submitBurger {
     height: 50px;
     text-align: center;
 }
+
+button.btnDevour {
+    background: white;
+    border: none;
+    padding: 10px;
+}
