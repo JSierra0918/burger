@@ -1,5 +1,6 @@
 body {
     background: url("../img/burger.gif") repeat;
+    font-family: 'Amatic SC', cursive;
 }
 .title {
     text-align: center;
@@ -13,12 +14,18 @@ body {
     margin: 0;
 }
 
+.title h1 {
+    font-size: 4em;
+}
+
 .title h3 {
     background: #FFC107;
 }
 
 .flex-mid {
     display: flex;
+    width: 60vw;
+    margin: 0 auto;
 }
 
 .not-devoured {
@@ -55,7 +62,8 @@ body {
 }
 
 .ul-Burger span {
-    margin-right: 20px;
+    margin-right: 2em;
+    margin-left: 2em;
 }
 
 .devouredText {
