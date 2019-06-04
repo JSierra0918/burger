@@ -1,7 +1,7 @@
 # Da Burger Joint!
 Come and create your own burger or eat our savory selection!
 
-checkout the app at [Da Burger Joint!](https://aqueous-everglades-77021.herokuapp.com/)
+checkout the app at [Da Burger Joint!](https://warm-citadel-69978.herokuapp.com/)
 
 ## Technologies
 * NPM
